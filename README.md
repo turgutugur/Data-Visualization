@@ -1,4 +1,4 @@
-# project-3
+
 ### Overview
 The objective of this project is to build interactive web visualizations in the form of a dashboard powered by a dataset. Our dashboard focus is on NBA Statistics, specifically the data on individual teams, team comparisons, and individual players.
 
