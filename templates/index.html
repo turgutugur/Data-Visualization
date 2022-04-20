@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA Statistics Data</title>
+    <link rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+
+
+    <style>
+        * {
+            margin: 0; padding: 0;
+        }
+
+        nav {
+            background-color: rgba(6, 28, 49);
+        }
+
+        .nav-link {
+            font-weight: bold;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #main_content {
+            margin: 20px;
+            border-radius: 20px;
+            padding: 20px;
+            background-color: rgba(250,235,215,0.6);
+        }
+
+        #container {
+            z-index: -1;
+            overflow: auto;
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+        }   
+
+        #background_video {
+            position: absolute;
+
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+
+            object-fit: cover;
+            height: 100%; width: 100%;
+        }
+
+        #video_cover {
+            position: absolute;
+
+            width: 100%; height: 100%;
+
+            background: url('/static/video_cover.jpg') no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        #overlay {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+    </style>
+
+</head>
+<body>
+    <!-- bootstrap navigations -->
+    <nav id="navigationlist">
+        <ul class="nav nav-pills nav-fill">
+            <li class="nav-item">
+                <a class="nav-link active" href="index">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="teams">Teams Standings</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="head">Head to Head Matchups</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="players">Top Players</a>
+            </li>
+        </ul>
+    </nav>
+    <br>
+    <div id="main_content">
+       
+        <h1>Project Description</h1>
+        <h4>The objective of this project is to build interactive web visualizations in the form of dashboard powered by a dataset. Our dashboard focus is on NBA Statistics, specifically the data on individual teams, team comparisons, and individual players.
+            <br><br>Our dashboard allows the user an interactive way to look up and explore:
+            <br>
+            <br>
+        <li>
+            3 NBA seasons (2019, 2020, and 2021) team standings</li>
+        <li>All head-to-head matchups for the 2020-2021 season</li>
+        <li>Top player stats: points, assists, field goal accuracy, and games played for seasons 1985-2021</li>
+        <br><br>
+        For more details visit our <a href="https://github.com/esalgado28/project-3">GitHub</a>.</h4>
+      <hr>  
+      <center> 
+        <footer>
+            <p>&copy; Project 3 - Group D 2022, Bootcamp!</p>
+        </footer>
+      </center>
+    
+    
+    </div>
+
+    <!-- background video -->
+    <div id="container">
+        <video id="background_video" loop muted></video>
+        <div id="video_cover"></div>
+        <div id="overlay"></div>
+    </div>
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    
+    <script src="/static/bideo.js"></script>
+    <script src="/static/background.js"></script>
+
+</body>
+
+    
+</body>
+</html>
