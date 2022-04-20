@@ -1,0 +1,6 @@
+gunicorn
+flask
+flask_cors
+bs4
+flask_pymongo
+dnspython
